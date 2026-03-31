@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Software Solutions – Signature IT Solutions</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.customer-sector {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--green);
+  transition: all 0.3s;
+}
+.customer-sector:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.customer-sector h4 { font-size:1rem;color:var(--dark);margin-bottom:6px;font-family:'Playfair Display',serif; }
+.customer-sector p { font-size:0.88rem;color:#666; }
+.sector-icon { font-size:2rem;margin-bottom:10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top"></div>
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="data:image/jpeg;base64,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" alt="Signature IT Solutions"/>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="software.html" class="active">Software</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Software <span style="color:#C9A84C;">Solutions</span></h1>
+  <p>Licensed software from world's leading technology companies</p>
+</div>
+<div class="triple-border"></div>
+
+<!-- SOFTWARE BRANDS -->
+<section>
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Software Licensing &amp; Solutions</h2>
+      <p>We are authorized resellers of premium software from these global leaders</p>
+    </div>
+    <div class="software-logos-grid fade-in">
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#00a2ed;">⊞</div>
+        <div class="sw-name" style="color:#00a2ed;">Microsoft</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Windows · Office · Server</div>
+      </div>
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#f80000;">🔶</div>
+        <div class="sw-name" style="color:#f80000;">Oracle</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Database · ERP · Cloud</div>
+      </div>
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#ff0000;">🅰</div>
+        <div class="sw-name" style="color:#ff0000;">Adobe</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Creative Suite · Acrobat</div>
+      </div>
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#e31b23;">🛡️</div>
+        <div class="sw-name" style="color:#e31b23;">Quick Heal</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Antivirus · Total Security</div>
+      </div>
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#c00;">🔒</div>
+        <div class="sw-name" style="color:#c00;">McAfee</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Endpoint · Network Sec</div>
+      </div>
+      <div class="software-logo-box">
+        <div class="sw-icon" style="color:#0066b2;">📊</div>
+        <div class="sw-name" style="color:#0066b2;">Tally</div>
+        <div style="font-size:0.75rem;color:#888;margin-top:4px;">Accounting · ERP · GST</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOFTWARE DETAIL -->
+<section class="bg-light">
+  <div class="container">
+    <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+      <div class="card fade-in">
+        <div class="card-icon">⊞</div>
+        <h3>Microsoft Solutions</h3>
+        <p>Complete Microsoft licensing including Windows OS, Office 365, Microsoft Teams, SQL Server, Windows Server, Azure Cloud, and all enterprise productivity solutions. Genuine licensed products with official support.</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🔶</div>
+        <h3>Oracle Software</h3>
+        <p>Oracle Database, Oracle ERP, Oracle Cloud Infrastructure (OCI) and business application solutions. We help organizations harness Oracle's power for data management and enterprise resource planning.</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🅰</div>
+        <h3>Adobe Creative Suite</h3>
+        <p>Adobe Acrobat, Photoshop, Illustrator, InDesign, Premiere Pro and all Creative Cloud applications. Corporate licensing solutions for design and document management teams.</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🛡️</div>
+        <h3>Quick Heal Antivirus</h3>
+        <p>Quick Heal Total Security for individual and business endpoints. Comprehensive protection against viruses, ransomware, spyware, and all digital threats for your organization.</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🔒</div>
+        <h3>McAfee Security</h3>
+        <p>McAfee enterprise endpoint security, network defense, and total protection suites. Scalable security solutions for corporate networks and government installations.</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">📊</div>
+        <h3>Tally Accounting</h3>
+        <p>Tally ERP 9 and TallyPrime for accounting, inventory, GST compliance, payroll, and complete business management. Authorized Tally partner with implementation support.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS SECTION -->
+<section>
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Valued Customers</h2>
+      <p>Serving leading organizations across major industry sectors since 2010</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;">
+      <div class="customer-sector fade-in">
+        <div class="sector-icon">🏭</div>
+        <h4>Manufacturing</h4>
+        <p>Leading manufacturing companies across Delhi NCR for all IT infrastructure needs.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--blue);">
+        <div class="sector-icon">🚗</div>
+        <h4>Automobile</h4>
+        <p>Automotive companies and dealership networks with complete IT setup and AMC.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--maroon);">
+        <div class="sector-icon">🏥</div>
+        <h4>Health Care</h4>
+        <p>Hospitals, clinics, and healthcare organizations requiring reliable IT systems.</p>
+      </div>
+      <div class="customer-sector fade-in">
+        <div class="sector-icon">🛍️</div>
+        <h4>Retail</h4>
+        <p>Retail chains and businesses for POS systems, networking, and security cameras.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--blue);">
+        <div class="sector-icon">🏦</div>
+        <h4>BFSI</h4>
+        <p>Banking, Financial Services &amp; Insurance organizations with secure IT solutions.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--maroon);">
+        <div class="sector-icon">💻</div>
+        <h4>ITES–BPO / KPO</h4>
+        <p>IT-enabled service, BPO, and KPO companies with large desktop fleets and servers.</p>
+      </div>
+      <div class="customer-sector fade-in">
+        <div class="sector-icon">🚚</div>
+        <h4>Logistics</h4>
+        <p>Logistics and supply chain companies for tracking systems and network infrastructure.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--blue);">
+        <div class="sector-icon">🏨</div>
+        <h4>Hotels &amp; Hospitality</h4>
+        <p>Hotel groups and hospitality businesses with conferencing and IT support.</p>
+      </div>
+      <div class="customer-sector fade-in" style="border-left-color:var(--maroon);">
+        <div class="sector-icon">🏛️</div>
+        <h4>Government &amp; PSUs</h4>
+        <p>Reputed government organizations and Public Sector Undertakings across India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER BRANDS -->
+<div class="partners" style="background:linear-gradient(135deg,#f0f4ff,#f5f0f5);">
+  <p class="partners-label">Our Hardware Partners</p>
+  <div class="logos-grid">
+    <div class="company-logo-box logo-hp fade-in"><div class="logo-icon">hp</div><div class="logo-name">HP</div></div>
+    <div class="company-logo-box logo-dell fade-in"><div class="logo-icon" style="font-style:italic;">DELL</div><div class="logo-name">Dell</div></div>
+    <div class="company-logo-box logo-ibm fade-in"><div class="logo-icon" style="letter-spacing:4px;font-size:1.5rem;">IBM</div><div class="logo-name">IBM</div></div>
+    <div class="company-logo-box logo-lenovo fade-in"><div class="logo-icon" style="font-size:1.2rem;font-style:italic;">Lenovo</div><div class="logo-name">Lenovo</div></div>
+    <div class="company-logo-box logo-cisco fade-in"><div class="logo-icon" style="font-size:1.2rem;letter-spacing:1px;">CISCO</div><div class="logo-name">Cisco</div></div>
+    <div class="company-logo-box logo-hik fade-in"><div class="logo-icon" style="font-size:0.9rem;text-align:center;">HIKVI<br>SION</div><div class="logo-name">Hikvision</div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Signature IT Solutions</h4>
+      <p style="font-size:0.88rem;line-height:1.7;">Authorized software reseller and IT solutions provider since 2010.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="software.html">Software Solutions</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Software</h4>
+      <ul>
+        <li><a href="#">Microsoft Licensing</a></li>
+        <li><a href="#">Oracle Solutions</a></li>
+        <li><a href="#">Adobe Creative Cloud</a></li>
+        <li><a href="#">Antivirus Solutions</a></li>
+        <li><a href="#">Tally ERP</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p style="font-size:0.87rem;line-height:1.8;">📍 Nehru Place, New Delhi 110019<br/>📞 011-41606378<br/>📱 +91-9958117168</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Signature IT Solutions. All Rights Reserved.</p></div>
+</footer>
+<div class="footer-border"></div>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
